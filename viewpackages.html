@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>18 Events & Managements - Packages</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hidden { display: none; }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-pink-100 to-blue-100 font-sans min-h-screen">
+
+  <div class="max-w-5xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg">
+    <h1 class="text-3xl font-extrabold text-pink-600 text-center mb-2">18 Events & Managements</h1>
+    <p class="text-center text-lg text-gray-500 mb-6">Explore Venue Packages by Category</p>
+
+    <!-- Tabs -->
+    <div class="flex justify-center mb-6">
+      <button onclick="showCategory('wedding')" class="px-4 py-2 bg-pink-500 text-white font-semibold rounded-l">Wedding Venues</button>
+      <button onclick="showCategory('outdoor')" class="px-4 py-2 bg-white text-black font-semibold border-t border-b">Outdoor Shoots</button>
+      <button onclick="showCategory('conference')" class="px-4 py-2 bg-white text-black font-semibold rounded-r border">Conference Venues</button>
+    </div>
+
+    <!-- Venue Sections -->
+    <div id="venue-list">
+      <!-- Wedding Venues -->
+      <div id="wedding" class="venue-category">
+        <h2 class="text-2xl font-bold text-pink-600 mb-4">Wedding Venues</h2>
+        <div class="space-y-4">
+          <div class="venue" data-name="Taj Mahal Palace, Mumbai" data-price="₹5,00,000" data-details="Royal Decor with Floral Mandap, Live Band & DJ Night, Premium Buffet for 300 Guests, Photography + Drone Coverage, Luxury Accommodation for Couple"></div>
+          <div class="venue" data-name="The Leela Palace, Delhi" data-price="₹4,00,000" data-details="Theme Decor: White & Gold, VIP Entry Setup with Red Carpet, Custom Wedding Cake, Professional Photography + Cinematography, Luxury Dining for 250 Guests"></div>
+          <div class="venue" data-name="ITC Maurya, Delhi" data-price="₹3,50,000" data-details="Theme Decor: Gold & Ivory, Event Coordinator & Planning Team, 200 Pax Gourmet Buffet, 2-day Event Photography, Luxury Suite for Couple"></div>
+          <div class="venue" data-name="The Oberoi, Mumbai" data-price="₹4,50,000" data-details="Indoor + Terrace Setup, Decorative Lighting & Floral Arches, Luxury Rooms for Family, Custom Video Invitation Design, Artist Performance Options"></div>
+          <div class="venue" data-name="Umaid Bhawan Palace, Jodhpur" data-price="₹6,00,000" data-details="Royal Rajasthani Theme Setup, Folk Performances + Fireworks, Traditional Thali + Continental Cuisine, 2-Day Accommodation for 50 Guests, Grand Royal Entry for Bride & Groom"></div>
+          <div class="venue" data-name="The Leela, Goa" data-price="₹3,00,000" data-details="Beachside Mandap Setup, Goan Seafood Buffet, DJ & Cocktail Night, Drone Shots + Couple Photoshoot, 2-Night Stay at Ocean View Villa"></div>
+        </div>
+      </div>
+
+      <!-- Outdoor Shoots -->
+      <div id="outdoor" class="venue-category hidden">
+        <h2 class="text-2xl font-bold text-pink-600 mb-4">Outdoor Shoots</h2>
+        <div class="space-y-4">
+          <div class="venue" data-name="Lodhi Garden, Delhi" data-price="₹25,000" data-details="Natural Backgrounds, Floral Props, 2-Hour Photography Session, Outfit Changes Allowed, Drone Shots"></div>
+          <div class="venue" data-name="Cubbon Park, Bangalore" data-price="₹30,000" data-details="Forest Path Setup, Couple Props, Golden Hour Coverage, Professional Editing, Cinematic Teasers"></div>
+          <div class="venue" data-name="Marine Drive, Mumbai" data-price="₹28,000" data-details="Beachside Photography, Sunset Time Slot, Romantic Decor Setup, Cinematic Videos, Outfit Guidance"></div>
+          <div class="venue" data-name="Rambagh Palace Gardens, Jaipur" data-price="₹35,000" data-details="Vintage Themes, Royal Backdrops, Bridal Photoshoot Session, Drone Coverage, Heritage Props"></div>
+          <div class="venue" data-name="Tea Gardens, Munnar" data-price="₹32,000" data-details="Lush Green Setup, Couple Coordination, Traditional Dress Options, Multi-location Shoot, Music Video Style Edit"></div>
+          <div class="venue" data-name="Dal Lake, Srinagar" data-price="₹40,000" data-details="Boat Shoot, Snowy Mountains Background, Traditional Kashmiri Dress, Cinematic Film, Pre-Wedding Highlights"></div>
+        </div>
+      </div>
+
+      <!-- Conference Venues -->
+      <div id="conference" class="venue-category hidden">
+        <h2 class="text-2xl font-bold text-pink-600 mb-4">Conference Venues</h2>
+        <div class="space-y-4">
+          <div class="venue" data-name="India Habitat Centre, Delhi" data-price="₹1,20,000" data-details="Stage Setup, Projector & Screens, Tea/Coffee Stations, Branding Boards, Sound System"></div>
+          <div class="venue" data-name="Hotel Novotel, Hyderabad" data-price="₹1,00,000" data-details="Air-conditioned Hall, AV Equipment, 100 Pax Seating, Lunch Buffet, Event Manager"></div>
+          <div class="venue" data-name="JW Marriott, Bangalore" data-price="₹1,50,000" data-details="Boardroom + Lounge Access, LED Display Wall, Live Streaming Setup, Premium Catering, Guest Shuttle"></div>
+          <div class="venue" data-name="Le Méridien, Kochi" data-price="₹1,10,000" data-details="Modern Interiors, Custom Stage Decor, Green Room Facility, Delegate Kit Setup, Wireless Presentation"></div>
+          <div class="venue" data-name="Hyatt Regency, Pune" data-price="₹90,000" data-details="Affordable Conference Space, 75 Pax Setup, Tea Break + Snacks, Free Parking, Technical Assistance"></div>
+          <div class="venue" data-name="Taj Krishna, Hyderabad" data-price="₹1,70,000" data-details="Luxury Conference Hall, Premium Buffet, Digital Signage, Event Photography, Exclusive Access Lobby"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Package Modal -->
+    <div id="package-details" class="hidden mt-8 p-6 bg-gray-100 rounded shadow">
+      <h2 id="package-title" class="text-2xl font-bold text-pink-600 mb-2"></h2>
+      <p id="package-price" class="text-lg font-semibold text-gray-700 mb-2"></p>
+      <ul id="package-list" class="list-disc ml-6 text-gray-700"></ul>
+      
+      <div class="mt-6 flex flex-col sm:flex-row gap-3">
+        <button onclick="goBack()" class="px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500">← Back to Venues</button>
+        <a href="payment.html" class="px-4 py-2 bg-pink-500 text-white rounded hover:bg-pink-600 text-center">💳 Pay Now</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showCategory(category) {
+      document.querySelectorAll(".venue-category").forEach(el => el.classList.add("hidden"));
+      document.getElementById(category).classList.remove("hidden");
+      document.getElementById("package-details").classList.add("hidden");
+      document.getElementById("venue-list").classList.remove("hidden");
+    }
+
+    function goBack() {
+      document.getElementById("package-details").classList.add("hidden");
+      document.getElementById("venue-list").classList.remove("hidden");
+    }
+
+    document.querySelectorAll(".venue").forEach(venue => {
+      const name = venue.dataset.name;
+      const price = venue.dataset.price;
+      const details = venue.dataset.details.split(',');
+
+      const div = document.createElement('div');
+      div.className = "flex justify-between items-center p-4 bg-gray-50 rounded shadow";
+      div.innerHTML = `
+        <div>
+          <h3 class="text-lg font-semibold">${name}</h3>
+          <p class="text-pink-600 font-bold">${price}</p>
+        </div>
+        <button class="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600">View Packages</button>
+      `;
+      venue.appendChild(div);
+
+      div.querySelector("button").addEventListener("click", () => {
+        document.getElementById("venue-list").classList.add("hidden");
+        document.getElementById("package-details").classList.remove("hidden");
+
+        document.getElementById("package-title").innerText = name;
+        document.getElementById("package-price").innerText = price;
+
+        const list = document.getElementById("package-list");
+        list.innerHTML = "";
+        details.forEach(item => {
+          const li = document.createElement("li");
+          li.textContent = item.trim();
+          list.appendChild(li);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

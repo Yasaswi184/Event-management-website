@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Venue Gallery - 18 Events & Managements</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- SwiperJS CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <style>
+    .swiper {
+      width: 100%;
+      height: 300px;
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-pink-100 to-blue-100 font-sans min-h-screen">
+  <div class="max-w-6xl mx-auto p-6">
+    <h1 class="text-3xl font-bold text-center text-pink-600 mb-10">Venue Gallery</h1>
+
+    <!-- Wedding Venues Slider -->
+    <h2 class="text-2xl font-semibold text-pink-500 mb-4">Wedding Venues</h2>
+    <div class="swiper mb-10">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://media.istockphoto.com/id/2171729692/photo/wedding-venue-with-flower-petals.jpg?s=612x612&w=0&k=20&c=9auTLqeuA_YnUqU1QQSHqYFpg1ak7-LctYdeYQVBKzE=" alt="Taj Mahal Palace"></div>
+        <div class="swiper-slide"><img src="https://media.istockphoto.com/id/1396680765/photo/luxury-golden-lighting-decoration-with-artificial-plant-in-party-stock-photo.jpg?s=612x612&w=0&k=20&c=DTC4iP3ic79S2Q49AUkGH3Ar2fwHRlODIBRW0ewD5kM=" alt="Leela Palace"></div>
+        <div class="swiper-slide"><img src="https://media.istockphoto.com/id/1387884589/photo/table-setting-for-an-event.jpg?s=612x612&w=0&k=20&c=uKg6gBbqqB1PLN1dtuj0LAUFDlXSaOgevC0a9pa41H0=" alt="ITC Maurya"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Outdoor Shoots Slider -->
+    <h2 class="text-2xl font-semibold text-pink-500 mb-4">Outdoor Shoots</h2>
+    <div class="swiper mb-10">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://media.istockphoto.com/id/1061972184/photo/landscape-of-snow-mountains-and-mountain-road-to-nubra-valley-in-leh-ladakh-india.jpg?s=612x612&w=0&k=20&c=i0pA6oVMEzUgBLp5V7CblN1wPwOO7A2D3orhfi7HGe4=" alt="Lodhi Garden"></div>
+        <div class="swiper-slide"><img src="https://media.istockphoto.com/id/482557081/photo/hawa-mahal-jaipur-india.jpg?s=612x612&w=0&k=20&c=A6qCUjoNH74nXCkB07RNgK3eIt2mun8PgsLPw9dNkVI=" alt="Marine Drive"></div>
+        <div class="swiper-slide"><img src="https://media.istockphoto.com/id/511119416/photo/indian-landmark-gadi-sagar-in-rajasthan.jpg?s=612x612&w=0&k=20&c=dO7TbXh3sd6_QmgcF_nYi6ynyIAvPI5STavwzCDyWTI="Dal Lake"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Conference Venues Slider -->
+    <h2 class="text-2xl font-semibold text-pink-500 mb-4">Conference Venues</h2>
+    <div class="swiper mb-10">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://media.istockphoto.com/id/492596662/photo/overhead-view-of-business-meetings.jpg?s=612x612&w=0&k=20&c=WhsvmlOA1sKzgs0PtSPA0BsQt5oLiekSzZs23dgM4VU=" alt="India Habitat Centre"></div>
+        <div class="swiper-slide"><img src="https://media.istockphoto.com/id/499517325/photo/a-man-speaking-at-a-business-conference.jpg?s=612x612&w=0&k=20&c=gWTTDs_Hl6AEGOunoQ2LsjrcTJkknf9G8BGqsywyEtE=" alt="JW Marriott"></div>
+        <div class="swiper-slide"><img src="https://media.istockphoto.com/id/1363104923/photo/diverse-modern-office-businessman-leads-business-meeting-with-managers-talks-uses.jpg?s=612x612&w=0&k=20&c=R6-SufHacJ6bCnviq37kik2Jl6RMdECybcUpEoRuMLs=" alt="Taj Krishna"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Back Link -->
+    <div class="text-center mt-6">
+      <a href="viewpackages.html" class="bg-pink-500 text-white px-6 py-2 rounded hover:bg-pink-600"> Go to Packages -></a>
+    </div>
+  </div>
+
+  <!-- SwiperJS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    document.querySelectorAll('.swiper').forEach(container => {
+      new Swiper(container, {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        pagination: {
+          el: container.querySelector('.swiper-pagination'),
+          clickable: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
+    });
+  </script>
+</body>
+</html>

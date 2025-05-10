@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile | 18 Events & Managements</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-r from-pink-200 via-pink-400 to-pink-600 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-pink-500 to-pink-700 text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-extrabold">18 Events & Managements</h1>
+      <nav class="space-x-6 text-sm">
+        <a href="home.html" class="hover:text-pink-200 transition-colors duration-300">Home</a>
+        <a href="profile.html" class="hover:text-pink-200 transition-colors duration-300">Profile</a>
+        <a href="login.html" class="hover:text-pink-200 transition-colors duration-300">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Profile Content -->
+  <section class="max-w-7xl mx-auto p-8 mt-8 bg-white rounded-lg shadow-xl">
+    <h2 class="text-4xl font-semibold text-center text-pink-600 mb-8">Profile Details</h2>
+
+    <!-- Profile Information -->
+    <div class="flex items-center space-x-6 mb-8">
+      <div class="w-32 h-32 rounded-full overflow-hidden bg-gray-200">
+        <!-- User Avatar (Replace with user's image) -->
+        <img src="https://plus.unsplash.com/premium_photo-1732757787074-0f95bf19cf73?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dXNlciUyMGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D" alt="User Avatar" class="w-full h-full object-cover">
+      </div>
+      <div>
+        <h3 class="text-3xl font-semibold text-pink-500">[User Name]</h3>
+        <p class="text-lg text-gray-600">[User Email]</p>
+        <p class="text-lg text-gray-600">[User Phone]</p>
+      </div>
+    </div>
+
+    <!-- Edit Profile Section -->
+    <div class="bg-pink-100 p-6 rounded-lg shadow-lg mb-6">
+      <h3 class="text-2xl font-semibold text-pink-500 mb-4">Edit Profile</h3>
+      <form action="#" method="POST" class="space-y-4">
+        <div>
+          <label for="name" class="block text-lg text-gray-700">Name</label>
+          <input type="text" id="name" name="name" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" value="[User Name]">
+        </div>
+        <div>
+          <label for="email" class="block text-lg text-gray-700">Email</label>
+          <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" value="[User Email]">
+        </div>
+        <div>
+          <label for="phone" class="block text-lg text-gray-700">Phone Number</label>
+          <input type="text" id="phone" name="phone" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" value="[User Phone]">
+        </div>
+        <div class="text-center">
+          <button type="submit" class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-full text-lg transition-all duration-300">Save Changes</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Change Password Section -->
+    <div class="bg-pink-100 p-6 rounded-lg shadow-lg mb-6">
+      <h3 class="text-2xl font-semibold text-pink-500 mb-4">Change Password</h3>
+      <form action="#" method="POST" class="space-y-4">
+        <div>
+          <label for="current-password" class="block text-lg text-gray-700">Current Password</label>
+          <input type="password" id="current-password" name="current-password" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500">
+        </div>
+        <div>
+          <label for="new-password" class="block text-lg text-gray-700">New Password</label>
+          <input type="password" id="new-password" name="new-password" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500">
+        </div>
+        <div>
+          <label for="confirm-password" class="block text-lg text-gray-700">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm-password" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500">
+        </div>
+        <div class="text-center">
+          <button type="submit" class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-full text-lg transition-all duration-300">Update Password</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4 mt-12 text-sm">
+    © 2025 18 Events & Managements. All Rights Reserved.
+  </footer>
+
+</body>
+</html>

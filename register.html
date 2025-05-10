@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <nav class="navbar">
+        <a href="home.html"></a>
+        <a href="services.html"></a>
+        <a href="booking.html"></a>
+        <a href="dashboard.html"></a>
+        <a href="payment.html"></a>
+        <a href="login.html"></a>
+      </nav>
+      
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register | 18 Events and Managements</title>
+  <style>
+    /* reset & globals */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body
+    
+ {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fde68a, #fca5a5);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* form wrapper */
+    .register-container {
+      background: white;
+      width: 360px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+    /* header */
+    .register-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .register-header h1 {
+      color: #b91c1c;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+    .register-header p {
+      color: #4b5563;
+      font-size: 0.9rem;
+    }
+
+    /* form fields */
+    .form-group {
+      margin-bottom: 16px;
+      text-align: left;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: #374151;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 1rem;
+      border: 2px solid #e5e7eb;
+      border-radius: 8px;
+      transition: border-color 0.3s;
+    }
+    .form-group input:focus {
+      border-color: #b91c1c;
+      outline: none;
+    }
+
+    /* submit button */
+    .btn-primary {
+      width: 100%;
+      padding: 12px;
+      background-color: #d6336c;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .btn-primary:hover {
+      background-color: #c2285c;
+    }
+
+    /* footer link */
+    .footer-link {
+      margin-top: 14px;
+      text-align: center;
+    }
+    .footer-link a {
+      color: #6b21a8;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .footer-link a:hover {
+      text-decoration: underline;
+    }
+   
+
+  </style>
+</head>
+<body>
+
+  <div class="register-container">
+    <header class="register-header">
+      <h1>Create Your Account</h1>
+      <p>Join 18 Events and Managements today</p>
+    </header>
+
+    <form action="types.html" method="GET">
+
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input id="fullName" name="fullName" type="text" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="Enter a password" required>
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Re-enter your password" required>
+      </div>
+      <button type="submit" class="btn-primary">Register</button>
+    </form>
+
+    <div class="footer-link">
+      <p>Already registered? <a href="login.html">Login</a></p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | 18 Events and Managements</title>
+  <style>
+    /* Global & Body */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fde68a, #fca5a5);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    .login-header {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(255,255,255,0.3);
+      backdrop-filter: blur(10px);
+    }
+    .login-header h1 {
+      color: #b91c1c;
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+    }
+    .login-header p {
+      color: #374151;
+      font-size: 1rem;
+    }
+
+    /* Main Container */
+    .login-main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .login-container {
+      background: white;
+      padding: 30px;
+      width: 320px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .login-container h2 {
+      color: #b91c1c;
+      margin-bottom: 20px;
+    }
+
+    /* Form Styles */
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      color: #374151;
+      font-weight: 500;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 1rem;
+      border: 2px solid #e5e7eb;
+      border-radius: 8px;
+      transition: border-color 0.3s;
+    }
+    .form-group input:focus {
+      border-color: #b91c1c;
+      outline: none;
+    }
+
+    /* Button */
+    .btn-primary {
+      width: 100%;
+      padding: 12px;
+      background-color: #b91c1c;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .btn-primary:hover {
+      background-color: #991b1b;
+    }
+
+    /* Back Link */
+    .back-link {
+      margin-top: 15px;
+    }
+    .back-link a {
+      color: #374151;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="login-header">
+    <h1>18 Events & Managements</h1>
+    <p>Sign in to continue to your dashboard</p>
+  </header>
+
+  <!-- Main Login Form -->
+  <main class="login-main">
+    <div class="login-container">
+      <h2>Login</h2>
+      <form action="viewgallery.html" method="GET">
+
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input id="username" name="username" type="text" placeholder="Enter username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="Enter password" required>
+        </div>
+        <button type="submit" class="btn-primary">Sign In</button>
+      </form>
+      <p class="back-link"><a href="home.html">← Back to Home</a></p>
+    </div>
+  </main>
+
+</body>
+</html>
